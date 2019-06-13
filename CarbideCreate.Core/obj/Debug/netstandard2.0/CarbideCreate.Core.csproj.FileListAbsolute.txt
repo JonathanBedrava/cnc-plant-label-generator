@@ -1,9 +1,0 @@
-C:\Users\jbedr\OneDrive\CNC\PlantSigns\CarbideCreate.Core\bin\Debug\netstandard2.0\CarbideCreate.Core.deps.json
-C:\Users\jbedr\OneDrive\CNC\PlantSigns\CarbideCreate.Core\bin\Debug\netstandard2.0\CarbideCreate.Core.dll
-C:\Users\jbedr\OneDrive\CNC\PlantSigns\CarbideCreate.Core\bin\Debug\netstandard2.0\CarbideCreate.Core.pdb
-C:\Users\jbedr\OneDrive\CNC\PlantSigns\CarbideCreate.Core\obj\Debug\netstandard2.0\CarbideCreate.Core.csprojAssemblyReference.cache
-C:\Users\jbedr\OneDrive\CNC\PlantSigns\CarbideCreate.Core\obj\Debug\netstandard2.0\CarbideCreate.Core.csproj.CoreCompileInputs.cache
-C:\Users\jbedr\OneDrive\CNC\PlantSigns\CarbideCreate.Core\obj\Debug\netstandard2.0\CarbideCreate.Core.AssemblyInfoInputs.cache
-C:\Users\jbedr\OneDrive\CNC\PlantSigns\CarbideCreate.Core\obj\Debug\netstandard2.0\CarbideCreate.Core.AssemblyInfo.cs
-C:\Users\jbedr\OneDrive\CNC\PlantSigns\CarbideCreate.Core\obj\Debug\netstandard2.0\CarbideCreate.Core.dll
-C:\Users\jbedr\OneDrive\CNC\PlantSigns\CarbideCreate.Core\obj\Debug\netstandard2.0\CarbideCreate.Core.pdb

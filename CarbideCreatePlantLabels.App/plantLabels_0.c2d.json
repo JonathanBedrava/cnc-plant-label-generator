@@ -1,0 +1,161 @@
+{
+    "CIRCLE_OBJECTS": [],
+    "CURVE_OBJECTS": [],
+    "DOCUMENT_VALUES": {
+        "BACKGROUND_IMAGE": "AAAAAA==",
+        "BACKGROUND_OPACITY": 0.5,
+        "BACKGROUND_POSITION_X": 0.0,
+        "BACKGROUND_POSITION_Y": 0.0,
+        "BACKGROUND_ROTATION": 0.0,
+        "BACKGROUND_SCALE": 1.0,
+        "BACKGROUND_VISIBLE": false,
+        "DISPLAYMM": false,
+        "HEIGHT": 203.2,
+        "MACHINE": "Nomad 883",
+        "MATERIAL": "Hard",
+        "RETRACT": 10.0,
+        "THICKNESS": 1.5875,
+        "WIDTH": 203.2,
+        "ZERO_X": 0.0,
+        "ZERO_Y": 0.0,
+        "ZERO_Z": 0.0,
+        "build_num": 316,
+        "grid_enabled": true,
+        "grid_spacing": 5.0,
+        "version": 1
+    },
+    "RECT_OBJECTS": [
+        {
+            "id": "{0d0fa82c-a243-4b60-9c87-7bf5bb08bcb5}",
+            "corner_type": 0,
+            "rotation": 0.0,
+            "radius": 0.0,
+            "group_id": null,
+            "height": 63.5,
+            "width": 97.55,
+            "position": [
+                48.775,
+                31.75
+            ]
+        },
+        {
+            "id": "{f26ab309-aec2-478c-a575-63f95645e079}",
+            "corner_type": 0,
+            "rotation": 0.0,
+            "radius": 0.0,
+            "group_id": null,
+            "height": 63.5,
+            "width": 97.55,
+            "position": [
+                150.075,
+                31.75
+            ]
+        },
+        {
+            "id": "{9c6237c1-b16d-4f0e-b03b-91dd118fc0cd}",
+            "corner_type": 0,
+            "rotation": 0.0,
+            "radius": 0.0,
+            "group_id": null,
+            "height": 63.5,
+            "width": 97.55,
+            "position": [
+                48.775,
+                99.0
+            ]
+        }
+    ],
+    "TEXT_OBJECTS": [
+        {
+            "id": "{af9c57ad-49f1-4d84-b918-a46cb523381c}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Segoe UI-Bold",
+            "rotation": 0.0,
+            "text": "Goji Berry",
+            "group_id": null,
+            "height": 12.7,
+            "width": 0.0,
+            "position": [
+                3.75,
+                50.8
+            ]
+        },
+        {
+            "id": "{b110ba0d-6b03-4ed7-9d11-383ff82c3148}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Segoe UI-Bold Italic",
+            "rotation": 0.0,
+            "text": "Lycium barbarum",
+            "group_id": null,
+            "height": 0.0,
+            "width": 90.05,
+            "position": [
+                3.75,
+                21.166666666666668
+            ]
+        },
+        {
+            "id": "{f32d818f-64e7-4597-b515-6e2e5319a9ba}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Segoe UI-Bold",
+            "rotation": 0.0,
+            "text": "Serviceberry",
+            "group_id": null,
+            "height": 12.7,
+            "width": 0.0,
+            "position": [
+                105.05,
+                50.8
+            ]
+        },
+        {
+            "id": "{240f4494-7538-49d0-8b2a-6b75a90b5633}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Segoe UI-Bold Italic",
+            "rotation": 0.0,
+            "text": "Amelanchier alnifolia",
+            "group_id": null,
+            "height": 0.0,
+            "width": 90.05,
+            "position": [
+                105.05,
+                21.166666666666668
+            ]
+        },
+        {
+            "id": "{e385a1af-e86e-4ae4-996e-55eb0d05f5db}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Segoe UI-Bold",
+            "rotation": 0.0,
+            "text": "Walking Onion",
+            "group_id": null,
+            "height": 12.7,
+            "width": 0.0,
+            "position": [
+                3.75,
+                118.05
+            ]
+        },
+        {
+            "id": "{26933c0a-0488-4d26-983c-74b5dfa7a473}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Segoe UI-Bold Italic",
+            "rotation": 0.0,
+            "text": "Allium cepa",
+            "group_id": null,
+            "height": 0.0,
+            "width": 57.52682999999999,
+            "position": [
+                3.75,
+                88.416666666666671
+            ]
+        }
+    ],
+    "TOOLPATH_GROUP_OBJECTS": []
+}

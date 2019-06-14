@@ -18,5 +18,6 @@ namespace CarbideCreatePlantLabels.App.Models
         public double LabelMargin {get;set;}
         public int MinCharResizeThreshhold { get; set; }
         public double MinCharResizeRatio {get;set;}
+        public double CommonNameHeightResizeRatio { get; set; }
     }
 }

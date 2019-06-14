@@ -2,6 +2,7 @@ using System;
 using CarbideCreate.Core.Models;
 using CarbideCreatePlantLabels.App.Models;
 using CarbideCreate.Core.Extensions;
+using System.Linq;
 
 namespace CarbideCreatePlantLabels.App.Services
 {
@@ -23,9 +24,9 @@ namespace CarbideCreatePlantLabels.App.Services
 
             var commonNameText = CreateTextObject(plantInfo.CommonName, _config.CommonFontName);
             
-            commonNameText.Height = _config.MinCommonFontY;
+            commonNameText.Height = GetCommonWidthHeight(_config.MinCommonFontY, plantInfo.CommonName);
             commonNameText.Position = new Point(){
-              Y = labelRect.Height - commonNameText.Height - _config.OffsetFromTop,
+              Y = GetCommonNameYPositon(labelRect.Height, commonNameText.Height, _config.OffsetFromTop),
               X = 0 + _config.OffsetFromLeft
             };
             label.TextObjects.Add(commonNameText);
@@ -39,6 +40,28 @@ namespace CarbideCreatePlantLabels.App.Services
             label.TextObjects.Add(scientificNameText);
             
             return label;
+        }
+
+        private double GetCommonNameYPositon(double rectHeight, double textHeight, double offsetFromTop)
+        {
+            return rectHeight - textHeight*_config.MinCommonFontY/textHeight - offsetFromTop;
+        }
+
+        private double GetCommonWidthHeight(double baseHeight, string text)
+        {
+            if(HasDescenders(text))
+            {
+               return baseHeight; 
+            }
+            
+            return baseHeight * _config.CommonNameHeightResizeRatio;
+        }
+
+        private bool HasDescenders(string text)
+        {
+            var descenders = "jgyqp";
+
+            return text.Any(c => descenders.Any(d => d == c));
         }
 
         private double GetScientificNameWidth(double labelWidth, string text)

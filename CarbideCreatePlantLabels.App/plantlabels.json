@@ -10,5 +10,17 @@
     {
         "CommonName":"Walking Onion",
         "ScientificName": "Allium cepa"
+    },
+    {
+        "CommonName": "Hazelnut",
+        "ScientificName": "Corylus avellana"
+    },
+    {
+        "CommonName":"Mulberry",
+        "ScientificName": "Morus nigra"
+    },
+    {
+        "CommonName":"Hardy kiwi",
+        "ScientificName":"Actinidia arguta"
     }
 ]

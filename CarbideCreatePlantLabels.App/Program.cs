@@ -23,13 +23,13 @@ namespace CarbideCreatePlantLabels.App
 
             _labelMaker = new LabelMaker(configuration);
 
-            var carbideDoc = new Document();
-
             var splitPlantInfos = totalPlantInfos.Partition<PlantInfo>(6);
 
             var i = 0;
             foreach(var plantInfos in splitPlantInfos)
             {
+                var carbideDoc = new Document();
+
                 AddObjects(carbideDoc,plantInfos);
                 var labelString = JsonConvert.SerializeObject(carbideDoc);
 

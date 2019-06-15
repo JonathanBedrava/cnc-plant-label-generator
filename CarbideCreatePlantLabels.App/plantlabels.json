@@ -22,5 +22,62 @@
     {
         "CommonName":"Hardy kiwi",
         "ScientificName":"Actinidia arguta"
-    }
+    },
+    {
+        "CommonName":"Oregano",
+        "ScientificName":"Origanum vulgare"
+    },
+    {
+        "CommonName":"Sage",
+        "ScientificName":"Salvia officinalis"
+    },
+    {
+        "CommonName":"Grape",
+        "ScientificName":"Vitis vinifera"
+    },
+    {
+        "CommonName":"Yarrow",
+        "ScientificName":"Achillea millefolium"
+    },
+    {
+        "CommonName":"Rhubarb",
+        "ScientificName":"Rheum x hybridum"
+    },
+    {
+        "CommonName":"Trifoliate orange",
+        "ScientificName":"Citrus trifoliata"
+    },
+    {
+        "CommonName":"Arugula",
+        "ScientificName":"Eruca sativa"
+    },
+    {
+        "CommonName":"Greater Burdock",
+        "ScientificName":"Arctium lappa"
+    },
+    {
+        "CommonName":"Honeysuckle",
+        "ScientificName":"Lonicera caprifolium"
+    },
+    {
+        "CommonName":"Crabapple",
+        "ScientificName":"Malus sylvestris"
+    },
+    {
+        "CommonName":"Siberian Pea Shrub",
+        "ScientificName":"Caragana arborescens"
+    },
+    {
+        "CommonName":"Jostaberry",
+        "ScientificName":"Ribes × nidigrolaria"
+    },
+    {
+        "CommonName":"Comfrey",
+        "ScientificName":"Symphytum officinale"
+    },
+    {
+        "CommonName":"Goumi",
+        "ScientificName":"Elaeagnus multiflora"
+    },
+    
 ]

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace CarbideCreatePlantLabels.App.Models
 {
     public class Configuration
@@ -16,8 +18,14 @@ namespace CarbideCreatePlantLabels.App.Models
         public double MinScientificFontY { get; set; }
 
         public double LabelMargin {get;set;}
-        public int MinCharResizeThreshhold { get; set; }
-        public double MinCharResizeRatio {get;set;}
         public double CommonNameHeightResizeRatio { get; set; }
+        
+        public IList<ResizeThreshhold> MaxCharResizeThreshholds {get;set;}
+        public IList<ResizeThreshhold> MinCharResizeThreshholds { get; set; }
+    }
+
+    public class ResizeThreshhold{
+        public int CharCount {get;set;}
+        public double ResizeRatio {get;set;}
     }
 }

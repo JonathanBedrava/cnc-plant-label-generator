@@ -49,12 +49,35 @@ namespace CarbideCreatePlantLabels.App.Services
 
         private double GetCommonWidthHeight(double baseHeight, string text)
         {
-            if(HasDescenders(text))
-            {
-               return baseHeight; 
-            }
+            var height = baseHeight;
             
-            return baseHeight * _config.CommonNameHeightResizeRatio;
+            if(!HasDescenders(text))
+            {
+               height = baseHeight * _config.CommonNameHeightResizeRatio;
+            }
+
+            var resizeRatio = GetMaxCharResizeRatio(text);
+
+            height *= resizeRatio;
+
+            return height;
+        }
+
+        private double GetMaxCharResizeRatio(string text)
+        {
+            for(var i = 0; i < _config.MaxCharResizeThreshholds.Count(); i++)
+            {
+                var ratio = _config.MaxCharResizeThreshholds[i];
+                if(text.Length >= ratio.CharCount && (
+                    i == _config.MaxCharResizeThreshholds.Count-1
+                    || text.Length < _config.MaxCharResizeThreshholds[i+1].CharCount                   
+                    ))
+                {
+                    return ratio.ResizeRatio;
+                }
+            }
+
+            return 1;
         }
 
         private bool HasDescenders(string text)
@@ -66,9 +89,24 @@ namespace CarbideCreatePlantLabels.App.Services
 
         private double GetScientificNameWidth(double labelWidth, string text)
         {
-            return text.Length > _config.MinCharResizeThreshhold ?
-                labelWidth - _config.OffsetFromLeft * 2
-                : labelWidth * _config.MinCharResizeRatio - _config.OffsetFromLeft*2;
+            return labelWidth * GetMinCharResizeRatio(text) - _config.OffsetFromLeft*2;
+        }
+
+        private double GetMinCharResizeRatio(string text)
+        {
+            for(var i = 0; i < _config.MinCharResizeThreshholds.Count(); i++)
+            {
+                var ratio = _config.MinCharResizeThreshholds[i];
+                if(text.Length <= ratio.CharCount && (
+                    i == _config.MinCharResizeThreshholds.Count-1
+                    || text.Length > _config.MinCharResizeThreshholds[i+1].CharCount                   
+                    ))
+                {
+                    return ratio.ResizeRatio;
+                }
+            }
+
+            return 1;
         }
 
         private TextObject CreateTextObject(string text, string font)

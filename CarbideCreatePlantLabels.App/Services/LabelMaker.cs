@@ -3,6 +3,7 @@ using CarbideCreate.Core.Models;
 using CarbideCreatePlantLabels.App.Models;
 using CarbideCreate.Core.Extensions;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace CarbideCreatePlantLabels.App.Services
 {
@@ -22,36 +23,81 @@ namespace CarbideCreatePlantLabels.App.Services
             var labelRect = CreateLabelRect();
             label.LabelRect = labelRect;
 
-            var commonNameText = CreateTextObject(plantInfo.CommonName, _config.CommonFontName);
-            
-            commonNameText.Height = GetCommonWidthHeight(_config.MinCommonFontY, plantInfo.CommonName);
-            commonNameText.Position = new Point(){
-              Y = GetCommonNameYPositon(labelRect.Height, commonNameText.Height, _config.OffsetFromTop),
-              X = 0 + _config.OffsetFromLeft
-            };
-            label.TextObjects.Add(commonNameText);
+            var commonNameTexts = GetCommonNameTexts(plantInfo, labelRect);
+            label.TextObjects.AddRange(commonNameTexts);
 
-            var scientificNameText = CreateTextObject(plantInfo.ScientificName, _config.ScientificFontName);
-            scientificNameText.Width = GetScientificNameWidth(labelRect.Width, plantInfo.ScientificName);
-            scientificNameText.Position = new Point(){
-                Y = labelRect.Height/3,
-                X = 0 + _config.OffsetFromLeft
-            };
-            label.TextObjects.Add(scientificNameText);
+            var scientificNameTexts = GetScientificNameTexts(plantInfo, labelRect);
+            label.TextObjects.AddRange(scientificNameTexts);
             
             return label;
         }
 
-        private double GetCommonNameYPositon(double rectHeight, double textHeight, double offsetFromTop)
+        private IEnumerable<TextObject> GetCommonNameTexts(PlantInfo plantInfo, RectObject labelRect)
         {
-            return rectHeight - textHeight*_config.MinCommonFontY/textHeight - offsetFromTop;
+            var yPos = GetCommonNameYPositon(labelRect.Height, _config.CommonFontY, _config.OffsetFromTop);
+            if(plantInfo.CommonName.Length < _config.CommonCharLengthThreshhold)
+            {
+                return new [] { CreateTextObject(plantInfo.CommonName, labelRect, _config.OffsetFromLeft, yPos, _config.CommonFontY, _config.CommonFontName)};
+            }
+
+            if(plantInfo.CommonName.Contains(" "))
+            {
+                var segs = plantInfo.CommonName.Split(' ');
+                var firstLine = segs[0];
+                var secondLine = segs.Skip(1).Aggregate((i,j) => i+" "+j);
+
+                return new []{
+                    CreateTextObject(firstLine, labelRect, _config.OffsetFromLeft, yPos, _config.CommonFontY, _config.CommonFontName),
+                    CreateTextObject(secondLine, labelRect, _config.OffsetFromLeft, yPos-_config.CommonFontY-_config.LineSpacing, _config.CommonFontY, _config.CommonFontName),
+                };
+            }
+
+            return new [] { CreateTextObject(plantInfo.CommonName, labelRect, _config.OffsetFromLeft, yPos, _config.CommonFontY*.9, _config.CommonFontName) };
         }
 
-        private double GetCommonWidthHeight(double baseHeight, string text)
+        private IEnumerable<TextObject> GetScientificNameTexts(PlantInfo plantInfo, RectObject labelRect)
+        {
+            if(plantInfo.ScientificName.Length < _config.ScientificCharLengthThreshhold)
+            {
+                var scientificNameText = CreateTextObject(plantInfo.ScientificName, labelRect, _config.OffsetFromLeft, labelRect.Height/3.5, _config.ScientificFontY, _config.ScientificFontName);
+                return new [] { scientificNameText};
+            }
+
+            var segs = plantInfo.ScientificName.Split(' ');
+            var firstLine = segs[0];
+            var secondLine = segs.Skip(1).Aggregate((i,j) => i+" "+j);
+
+            return new []{
+                CreateTextObject(firstLine, labelRect, _config.OffsetFromLeft, labelRect.Height/3.5, _config.ScientificFontY,  _config.ScientificFontName),
+                CreateTextObject(secondLine, labelRect, _config.OffsetFromLeft, labelRect.Height/3.5-_config.ScientificFontY-_config.LineSpacing, _config.ScientificFontY, _config.ScientificFontName),
+            };
+        }
+
+        private TextObject CreateTextObject(string text, RectObject labelRect, double x, double y, double fontHeight, string font)
+        {
+
+                var textObj = new TextObject(){
+                    Font = font,
+                    Text = text,
+                };
+                textObj.FontHeight = fontHeight;
+                textObj.Position = new Point(){
+                    Y = y,
+                    X = x
+                };
+                return textObj;
+        }
+
+        private double GetCommonNameYPositon(double rectHeight, double textHeight, double offsetFromTop)
+        {
+            return rectHeight - textHeight*_config.CommonFontY/textHeight - offsetFromTop;
+        }
+
+        private double GetCommonNameHeight(double baseHeight, string text)
         {
             var height = baseHeight;
             
-            if(!HasDescenders(text))
+            if(_config.CompensateForDescenders && !HasDescenders(text))
             {
                height = baseHeight * _config.CommonNameHeightResizeRatio;
             }
@@ -87,9 +133,9 @@ namespace CarbideCreatePlantLabels.App.Services
             return text.Any(c => descenders.Any(d => d == c));
         }
 
-        private double GetScientificNameWidth(double labelWidth, string text)
+        private double GetScientificNameFontHeight(double labelHeight, string text)
         {
-            return labelWidth * GetMinCharResizeRatio(text) - _config.OffsetFromLeft*2;
+            return labelHeight * GetMaxCharResizeRatio(text);
         }
 
         private double GetMinCharResizeRatio(string text)
@@ -107,14 +153,6 @@ namespace CarbideCreatePlantLabels.App.Services
             }
 
             return 1;
-        }
-
-        private TextObject CreateTextObject(string text, string font)
-        {
-            return new TextObject(){
-                Font = font,
-                Text = text,
-            };
         }
 
         private RectObject CreateLabelRect()

@@ -19,7 +19,7 @@ namespace CarbideCreatePlantLabels.App
 
             var plantInfosPath =  args[0];
 
-            var totalPlantInfos = JsonConvert.DeserializeObject<List<PlantInfo>>(File.ReadAllText(plantInfosPath));
+            var totalPlantInfos = GetTotalPlantInfos(JsonConvert.DeserializeObject<List<PlantInfo>>(File.ReadAllText(plantInfosPath)));
 
             _labelMaker = new LabelMaker(configuration);
 
@@ -36,6 +36,19 @@ namespace CarbideCreatePlantLabels.App
                 File.WriteAllText($"plantLabels_{i}.c2d", labelString);
                 i++;
             }
+        }
+
+        private static IList<PlantInfo> GetTotalPlantInfos(IList<PlantInfo> list)
+        {
+            var totalPlantInfos = new List<PlantInfo>();
+            foreach(var plantInfo in list)
+            {
+                for(var i = 0; i < plantInfo.Quantity; i++)
+                {
+                    totalPlantInfos.Add(plantInfo);
+                }
+            }
+            return totalPlantInfos;
         }
 
         private static void AddObjects(Document carbideDoc, IList<PlantInfo> plantInfos )

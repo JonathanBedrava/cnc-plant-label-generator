@@ -4,5 +4,7 @@ namespace CarbideCreatePlantLabels.App.Models
     {
         public string CommonName {get;set;}
         public string ScientificName {get;set;}
+
+        public int Quantity {get;set;} = 1;
     }
 }

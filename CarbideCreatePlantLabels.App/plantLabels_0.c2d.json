@@ -26,7 +26,7 @@
     },
     "RECT_OBJECTS": [
         {
-            "id": "{0d0fa82c-a243-4b60-9c87-7bf5bb08bcb5}",
+            "id": "{5ff6d92a-b4ec-4168-ab25-b9fc39474330}",
             "corner_type": 0,
             "rotation": 0.0,
             "radius": 0.0,
@@ -39,7 +39,7 @@
             ]
         },
         {
-            "id": "{f26ab309-aec2-478c-a575-63f95645e079}",
+            "id": "{ed88ae3e-cc38-48e8-8c1e-f1367e6b532f}",
             "corner_type": 0,
             "rotation": 0.0,
             "radius": 0.0,
@@ -52,7 +52,7 @@
             ]
         },
         {
-            "id": "{9c6237c1-b16d-4f0e-b03b-91dd118fc0cd}",
+            "id": "{79401439-018c-4aef-89b2-4120d269fc25}",
             "corner_type": 0,
             "rotation": 0.0,
             "radius": 0.0,
@@ -63,31 +63,72 @@
                 48.775,
                 99.0
             ]
+        },
+        {
+            "id": "{1b90f2ce-3c66-4dcc-af34-7332acb44d98}",
+            "corner_type": 0,
+            "rotation": 0.0,
+            "radius": 0.0,
+            "group_id": null,
+            "height": 63.5,
+            "width": 97.55,
+            "position": [
+                150.075,
+                99.0
+            ]
+        },
+        {
+            "id": "{84640b09-35c9-49c6-981a-b0b71ab75afe}",
+            "corner_type": 0,
+            "rotation": 0.0,
+            "radius": 0.0,
+            "group_id": null,
+            "height": 63.5,
+            "width": 97.55,
+            "position": [
+                48.775,
+                166.25
+            ]
+        },
+        {
+            "id": "{ad0b445f-de85-4425-a33b-ab8f25eb2534}",
+            "corner_type": 0,
+            "rotation": 0.0,
+            "radius": 0.0,
+            "group_id": null,
+            "height": 63.5,
+            "width": 97.55,
+            "position": [
+                150.075,
+                166.25
+            ]
         }
     ],
     "TEXT_OBJECTS": [
         {
-            "id": "{af9c57ad-49f1-4d84-b918-a46cb523381c}",
+            "id": "{6ec2b329-0e66-431a-99f9-fac36f218f63}",
             "flip_horiz": false,
             "flip_vert": false,
-            "font": "Segoe UI-Bold",
+            "font": "Botera TFE-Regular Stencil",
             "rotation": 0.0,
             "text": "Goji Berry",
+            "font_height": 12.7,
             "group_id": null,
-            "height": 12.7,
+            "height": 0.0,
             "width": 0.0,
             "position": [
                 3.75,
-                50.8
+                "NaN"
             ]
         },
         {
-            "id": "{b110ba0d-6b03-4ed7-9d11-383ff82c3148}",
+            "id": "{efebf053-4237-492a-9f1e-dd76f278918c}",
             "flip_horiz": false,
             "flip_vert": false,
-            "font": "Segoe UI-Bold Italic",
+            "font": "Botera TFE-Regular Stencil",
             "rotation": 0.0,
             "text": "Lycium barbarum",
+            "font_height": 0.0,
             "group_id": null,
             "height": 0.0,
             "width": 90.05,
@@ -97,27 +138,29 @@
             ]
         },
         {
-            "id": "{f32d818f-64e7-4597-b515-6e2e5319a9ba}",
+            "id": "{c0b8db60-7d5a-4d7e-aeeb-913df9ef3302}",
             "flip_horiz": false,
             "flip_vert": false,
-            "font": "Segoe UI-Bold",
+            "font": "Botera TFE-Regular Stencil",
             "rotation": 0.0,
             "text": "Serviceberry",
+            "font_height": 12.7,
             "group_id": null,
-            "height": 12.7,
+            "height": 0.0,
             "width": 0.0,
             "position": [
                 105.05,
-                50.8
+                "NaN"
             ]
         },
         {
-            "id": "{240f4494-7538-49d0-8b2a-6b75a90b5633}",
+            "id": "{7aa6b97d-7f7d-4882-bd15-81fba95fc0de}",
             "flip_horiz": false,
             "flip_vert": false,
-            "font": "Segoe UI-Bold Italic",
+            "font": "Botera TFE-Regular Stencil",
             "rotation": 0.0,
             "text": "Amelanchier alnifolia",
+            "font_height": 0.0,
             "group_id": null,
             "height": 0.0,
             "width": 90.05,
@@ -127,33 +170,131 @@
             ]
         },
         {
-            "id": "{e385a1af-e86e-4ae4-996e-55eb0d05f5db}",
+            "id": "{df5c835f-74e6-4e5c-990f-345f1d2434eb}",
             "flip_horiz": false,
             "flip_vert": false,
-            "font": "Segoe UI-Bold",
+            "font": "Botera TFE-Regular Stencil",
             "rotation": 0.0,
             "text": "Walking Onion",
+            "font_height": 12.7,
             "group_id": null,
-            "height": 12.7,
+            "height": 0.0,
             "width": 0.0,
             "position": [
                 3.75,
-                118.05
+                "NaN"
             ]
         },
         {
-            "id": "{26933c0a-0488-4d26-983c-74b5dfa7a473}",
+            "id": "{e869ef10-354a-4da7-8a78-5da039621d23}",
             "flip_horiz": false,
             "flip_vert": false,
-            "font": "Segoe UI-Bold Italic",
+            "font": "Botera TFE-Regular Stencil",
             "rotation": 0.0,
             "text": "Allium cepa",
+            "font_height": 0.0,
             "group_id": null,
             "height": 0.0,
-            "width": 57.52682999999999,
+            "width": 70.54,
             "position": [
                 3.75,
                 88.416666666666671
+            ]
+        },
+        {
+            "id": "{15733105-a4b9-4eec-be36-e6068264228b}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Botera TFE-Regular Stencil",
+            "rotation": 0.0,
+            "text": "Hazelnut",
+            "font_height": 9.93775,
+            "group_id": null,
+            "height": 0.0,
+            "width": 0.0,
+            "position": [
+                105.05,
+                "NaN"
+            ]
+        },
+        {
+            "id": "{8890cd41-8f3f-4bf9-9621-025317e80f36}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Botera TFE-Regular Stencil",
+            "rotation": 0.0,
+            "text": "Corylus avellana",
+            "font_height": 0.0,
+            "group_id": null,
+            "height": 0.0,
+            "width": 90.05,
+            "position": [
+                105.05,
+                88.416666666666671
+            ]
+        },
+        {
+            "id": "{8ed50084-d08e-45c9-92f8-9857ab73c5ef}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Botera TFE-Regular Stencil",
+            "rotation": 0.0,
+            "text": "Mulberry",
+            "font_height": 12.7,
+            "group_id": null,
+            "height": 0.0,
+            "width": 0.0,
+            "position": [
+                3.75,
+                "NaN"
+            ]
+        },
+        {
+            "id": "{17dab67c-e1bf-4b8d-8930-300a8fed2a1d}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Botera TFE-Regular Stencil",
+            "rotation": 0.0,
+            "text": "Morus nigra",
+            "font_height": 0.0,
+            "group_id": null,
+            "height": 0.0,
+            "width": 70.54,
+            "position": [
+                100.75,
+                200.66666666666666
+            ]
+        },
+        {
+            "id": "{14877a69-990a-45c6-9f2d-6900d9086650}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Botera TFE-Regular Stencil",
+            "rotation": 0.0,
+            "text": "Hardy kiwi",
+            "font_height": 12.7,
+            "group_id": null,
+            "height": 0.0,
+            "width": 0.0,
+            "position": [
+                105.05,
+                "NaN"
+            ]
+        },
+        {
+            "id": "{20f6d216-f01a-4237-8a99-c59498a94d3a}",
+            "flip_horiz": false,
+            "flip_vert": false,
+            "font": "Botera TFE-Regular Stencil",
+            "rotation": 0.0,
+            "text": "Actinidia arguta",
+            "font_height": 0.0,
+            "group_id": null,
+            "height": 0.0,
+            "width": 90.05,
+            "position": [
+                105.05,
+                155.66666666666666
             ]
         }
     ],

@@ -14,14 +14,18 @@ namespace CarbideCreatePlantLabels.App.Models
 
         public string CommonFontName { get; set; }
         public string ScientificFontName { get; set; }
-        public double MinCommonFontY { get; set; }
-        public double MinScientificFontY { get; set; }
+        public double CommonFontY { get; set; }
+        public double ScientificFontY { get; set; }
 
         public double LabelMargin {get;set;}
         public double CommonNameHeightResizeRatio { get; set; }
         
         public IList<ResizeThreshhold> MaxCharResizeThreshholds {get;set;}
         public IList<ResizeThreshhold> MinCharResizeThreshholds { get; set; }
+        public bool CompensateForDescenders { get; set; } = false;
+        public int ScientificCharLengthThreshhold { get; set; } = 14;
+        public double LineSpacing {get;set;} = 3;
+        public int CommonCharLengthThreshhold { get; internal set; } = 11;
     }
 
     public class ResizeThreshhold{

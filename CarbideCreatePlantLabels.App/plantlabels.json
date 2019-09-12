@@ -1,19 +1,37 @@
 [
     {
-        "CommonName":"Goji Berry",
-        "ScientificName":"Lycium barbarum"
+        "CommonName":"Goumi",
+        "ScientificName":"Elaeagnus multiflora",
+        "Quantity": 3
     },
     {
         "CommonName": "Serviceberry",
-        "ScientificName":"Amelanchier alnifolia"
+        "ScientificName":"Amelanchier alnifolia",
+        "Quantity": 4
+    },
+    {
+        "CommonName": "Haskap",
+        "ScientificName":"Lonicera caerulea",
+        "Quantity": 2
+    },
+    {
+        "CommonName": "Lovage",
+        "ScientificName": "Levisticum officinale"
     },
     {
         "CommonName":"Walking Onion",
-        "ScientificName": "Allium cepa"
+        "ScientificName": "Allium cepa",
+        "Quantity": 1
     },
     {
         "CommonName": "Hazelnut",
-        "ScientificName": "Corylus avellana"
+        "ScientificName": "Corylus avellana",
+        "Quantity": 5
+    },
+    {
+        "CommonName":"Paw Paw",
+        "ScientificName":"Asimina triloba",
+        "Quantity": 6
     },
     {
         "CommonName":"Mulberry",
@@ -21,7 +39,8 @@
     },
     {
         "CommonName":"Hardy kiwi",
-        "ScientificName":"Actinidia arguta"
+        "ScientificName":"Actinidia arguta",
+        "Quantity": 5
     },
     {
         "CommonName":"Oregano",
@@ -33,7 +52,8 @@
     },
     {
         "CommonName":"Grape",
-        "ScientificName":"Vitis vinifera"
+        "ScientificName":"Vitis vinifera",
+        "Quantity": 2
     },
     {
         "CommonName":"Yarrow",
@@ -53,7 +73,8 @@
     },
     {
         "CommonName":"Greater Burdock",
-        "ScientificName":"Arctium lappa"
+        "ScientificName":"Arctium lappa",
+        "Quantity": 5
     },
     {
         "CommonName":"Honeysuckle",
@@ -69,15 +90,17 @@
     },
     {
         "CommonName":"Jostaberry",
-        "ScientificName":"Ribes × nidigrolaria"
+        "ScientificName":"Ribes × nidigrolaria",
+        "Quantity": 2
+    },
+    {
+        "CommonName":"Goji Berry",
+        "ScientificName":"Lycium barbarum",
+        "Quantity": 2
     },
     {
         "CommonName":"Comfrey",
         "ScientificName":"Symphytum officinale"
-    },
-    {
-        "CommonName":"Goumi",
-        "ScientificName":"Elaeagnus multiflora"
-    },
+    } 
     
 ]

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using CarbideCreate.Core.Models.ToolPath;
 using Newtonsoft.Json;
 
 namespace CarbideCreate.Core.Models

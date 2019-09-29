@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CarbideCreate.Core.Models.ToolPath;
 
 namespace CarbideCreatePlantLabels.App.Models
 {
@@ -26,7 +27,17 @@ namespace CarbideCreatePlantLabels.App.Models
         public int ScientificCharLengthThreshhold { get; set; } = 14;
         public double CommonNameLineSpacing {get;set;} = 4;
         public double ScientificNameLineSpacing {get;set;} = 4;        
-        public int CommonCharLengthThreshhold { get; internal set; } = 11;
+        public int CommonCharLengthThreshhold { get; set; } = 11;
+        public Speeds CutoutSpeeds { get; set; }
+        public double CutoutStepDown { get; set; }
+        public double CutoutStepOver { get; set; }
+        public Tool CutoutTool { get; set; }
+        public Speeds TextSpeeds { get; set; }
+        public double TextStepDown { get; set; }
+        public double TextStepOver { get; set; }
+        public Tool TextTool { get; set; }
+        public double TextTolerance { get; set; }
+        public double CutoutTolerance { get; set; }
     }
 
     public class ResizeThreshhold{

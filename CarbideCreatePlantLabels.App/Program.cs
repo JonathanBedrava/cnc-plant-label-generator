@@ -12,6 +12,7 @@ namespace CarbideCreatePlantLabels.App
     class Program
     {
         private static LabelMaker _labelMaker;
+        private static ToolPathMaker _toolPathMaker;
 
         static void Main(string[] args)
         {
@@ -22,6 +23,7 @@ namespace CarbideCreatePlantLabels.App
             var totalPlantInfos = GetTotalPlantInfos(JsonConvert.DeserializeObject<List<PlantInfo>>(File.ReadAllText(plantInfosPath)));
 
             _labelMaker = new LabelMaker(configuration);
+            _toolPathMaker = new ToolPathMaker(configuration);
 
             var splitPlantInfos = totalPlantInfos.Partition<PlantInfo>(6);
 
@@ -29,13 +31,21 @@ namespace CarbideCreatePlantLabels.App
             foreach(var plantInfos in splitPlantInfos)
             {
                 var carbideDoc = new Document();
+                carbideDoc.DocumentValues.Thickness = configuration.LabelZ;
 
                 AddObjects(carbideDoc,plantInfos);
+                carbideDoc = AddToolPaths(configuration, carbideDoc);
+
                 var labelString = JsonConvert.SerializeObject(carbideDoc);
 
                 File.WriteAllText($"plantLabels_{i}.c2d", labelString);
                 i++;
             }
+        }
+
+        private static Document AddToolPaths(Configuration configuration, Document carbideDoc)
+        {
+            return _toolPathMaker.CreateLabelToolPaths(carbideDoc);
         }
 
         private static IList<PlantInfo> GetTotalPlantInfos(IList<PlantInfo> list)

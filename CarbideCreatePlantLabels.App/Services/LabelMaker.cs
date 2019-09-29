@@ -79,7 +79,7 @@ namespace CarbideCreatePlantLabels.App.Services
 
             return new []{
                 CreateTextObject(firstLine, labelRect, _config.OffsetFromLeft, labelRect.Height/3.5, _config.ScientificFontY,  _config.ScientificFontName),
-                CreateTextObject(secondLine, labelRect, _config.OffsetFromLeft, labelRect.Height/3.5-_config.ScientificFontY-_config.LineSpacing, _config.ScientificFontY, _config.ScientificFontName),
+                CreateTextObject(secondLine, labelRect, _config.OffsetFromLeft, labelRect.Height/3.5-_config.ScientificFontY-_config.ScientificNameLineSpacing, _config.ScientificFontY, _config.ScientificFontName),
             };
         }
 

@@ -24,7 +24,7 @@ namespace CarbideCreatePlantLabels.App.Models
         public IList<ResizeThreshhold> MinCharResizeThreshholds { get; set; }
         public bool CompensateForDescenders { get; set; } = false;
         public int ScientificCharLengthThreshhold { get; set; } = 14;
-        public double LineSpacing {get;set;} = 3;
+        public double LineSpacing {get;set;} = 4;
         public int CommonCharLengthThreshhold { get; internal set; } = 11;
     }
 

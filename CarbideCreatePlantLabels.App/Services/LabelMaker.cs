@@ -47,8 +47,18 @@ namespace CarbideCreatePlantLabels.App.Services
                 var secondLine = segs.Skip(1).Aggregate((i,j) => i+" "+j);
 
                 return new []{
-                    CreateTextObject(firstLine, labelRect, _config.OffsetFromLeft, yPos, _config.CommonFontY, _config.CommonFontName),
-                    CreateTextObject(secondLine, labelRect, _config.OffsetFromLeft, yPos-_config.CommonFontY-_config.LineSpacing, _config.CommonFontY, _config.CommonFontName),
+                    CreateTextObject(firstLine,
+                        labelRect,
+                        _config.OffsetFromLeft,
+                         yPos,
+                        _config.CommonFontY,
+                        _config.CommonFontName),
+                    CreateTextObject(secondLine,
+                    labelRect,
+                    _config.OffsetFromLeft,
+                    yPos-_config.CommonFontY-_config.CommonNameLineSpacing,
+                    _config.CommonFontY,
+                    _config.CommonFontName),
                 };
             }
 

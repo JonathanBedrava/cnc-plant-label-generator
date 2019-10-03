@@ -8,6 +8,7 @@ namespace CarbideCreate.Core.Models.ToolPath
     {
         [JsonProperty("TOOLPATH_OBJECTS")]
         public IList<ToolPathObject> ToolPathObjects { get; set; } = new List<ToolPathObject>();
+        [JsonProperty("enabled")]
         public bool Enabled { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }

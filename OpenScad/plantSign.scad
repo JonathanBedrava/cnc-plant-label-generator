@@ -2,7 +2,7 @@ include <triangle.scad>;
 
 nutX = 10;
 nutY = 10;
-nutZ = 5;
+nutZ = 5.5;
 
 boltZ = 10;
 boltRad = 6.1/2;
@@ -18,7 +18,7 @@ spikeLen = 60;
 
 labelX = 97.55;
 labelY = 63.5;
-labelZ = 0.675;
+labelZ = 1.35;
 
 labelAngle = 45;
 
@@ -27,9 +27,9 @@ margin = 5;
 
 translate([stakeY, 0, 0]) {
     
-stake();
+//stake();
 
-//labelBlock();
+labelBlock();
 
 //rotate([0,0,-labelAngle])
 //translate([-stakeY/2-blockThickness-labelZ,0,stakeZ/2])
@@ -101,8 +101,10 @@ module labelBlock()
         cube([labelX+margin,labelY+margin,blockThickness], center = true);
         translate([0,0,blockThickness/2-labelZ/2])
             labelFootprint();
-        translate([-nutX/2,-nutY/2,-blockThickness/2-.005])
+        translate([-nutX/2,-nutY/2,blockThickness/2-labelZ-nutZ+.02])
             nut();
+        cylinder(h=boltZ*2, r = boltRad, center=true, $fn = globalFn);
+        
     }
 }
 

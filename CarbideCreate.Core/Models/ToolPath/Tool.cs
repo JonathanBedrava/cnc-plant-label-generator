@@ -24,6 +24,6 @@ namespace CarbideCreate.Core.Models.ToolPath
         [JsonProperty("overall_length")]
         public double OverallLength { get; set; }
         [JsonProperty("uuid")]
-        public Guid Uuid { get; set; } = Guid.NewGuid();
+        public string Uuid { get; set; } = $"{{{Guid.NewGuid()}}}";
     }
 }

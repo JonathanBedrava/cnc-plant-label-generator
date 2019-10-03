@@ -7,6 +7,7 @@ namespace CarbideCreatePlantLabels.App.Services
 {
     public class ToolPathMaker
     {
+        private Random _rand = new Random();
         private readonly Configuration _configuration;
 
         public ToolPathMaker(Configuration configuration)
@@ -23,8 +24,8 @@ namespace CarbideCreatePlantLabels.App.Services
                 Enabled = true
             };
     
-            group.ToolPathObjects.Add(CreateRectToolPath(document));
             group.ToolPathObjects.Add(CreateTextToolPaths(document));
+            group.ToolPathObjects.Add(CreateRectToolPath(document));
             
             document.ToolPathGroupObjects.Add(group);
             
@@ -35,6 +36,13 @@ namespace CarbideCreatePlantLabels.App.Services
         {
             var group = new ToolPathGroupObject();
            
+            var tool = _configuration.TextTool;
+            tool.Uuid = $"{{{Guid.NewGuid()}}}";
+            tool.Number = _rand.Next(1000,2000);
+            tool.Diameter = _configuration.LabelZ;
+            tool.Length = _configuration.LabelZ;
+            tool.OverallLength = _configuration.LabelZ;
+
             var textPath = new ToolPathObject()
             {
                 Name = "Text",

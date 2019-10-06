@@ -39,9 +39,10 @@ namespace CarbideCreatePlantLabels.App.Services
             var tool = _configuration.TextTool;
             tool.Uuid = $"{{{Guid.NewGuid()}}}";
             tool.Number = _rand.Next(1000,2000);
-            tool.Diameter = _configuration.LabelZ;
-            tool.Length = _configuration.LabelZ;
-            tool.OverallLength = _configuration.LabelZ;
+            tool.Diameter = _configuration.TextMaxZ;
+            tool.Length = _configuration.TextMaxZ;
+            tool.OverallLength = _configuration.TextMaxZ;
+            tool.Name = $"{tool.Angle}deg Vee";
 
             var textPath = new ToolPathObject()
             {
@@ -49,7 +50,7 @@ namespace CarbideCreatePlantLabels.App.Services
                 Enabled = true,
                 OffsetDir = 3,
                 StartDepth = 0,
-                EndDepth = -_configuration.LabelZ,
+                EndDepth = -_configuration.TextMaxZ,
                 Speeds = _configuration.TextSpeeds,
                 StepDown = _configuration.TextStepDown,
                 StepOver = _configuration.TextStepOver,

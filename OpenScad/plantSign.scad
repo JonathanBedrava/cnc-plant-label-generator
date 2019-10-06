@@ -101,10 +101,8 @@ module labelBlock()
         cube([labelX+margin,labelY+margin,blockThickness], center = true);
         translate([0,0,blockThickness/2-labelZ/2])
             labelFootprint();
-        translate([-nutX/2,-nutY/2,blockThickness/2-labelZ-nutZ+.02])
+        translate([-nutX/2,-nutY/2,-blockThickness/2-.005])
             nut();
-        cylinder(h=boltZ*2, r = boltRad, center=true, $fn = globalFn);
-        
     }
 }
 

@@ -2,7 +2,7 @@
     {
         "CommonName":"Goumi",
         "ScientificName":"Elaeagnus multiflora",
-        "Quantity": 3
+        "Quantity": 9
     },
     {
         "CommonName": "Serviceberry",
@@ -31,16 +31,12 @@
     {
         "CommonName":"Paw Paw",
         "ScientificName":"Asimina triloba",
-        "Quantity": 6
-    },
-    {
-        "CommonName":"Mulberry",
-        "ScientificName": "Morus nigra"
+        "Quantity": 10
     },
     {
         "CommonName":"Hardy kiwi",
         "ScientificName":"Actinidia arguta",
-        "Quantity": 5
+        "Quantity": 4
     },
     {
         "CommonName":"Oregano",
@@ -66,6 +62,10 @@
     {
         "CommonName":"Trifoliate orange",
         "ScientificName":"Citrus trifoliata"
+    },
+    {
+        "CommonName": "Elderberry",
+        "ScientificName": "Sambucus canadensis"
     },
     {
         "CommonName":"Arugula",

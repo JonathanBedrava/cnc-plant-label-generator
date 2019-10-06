@@ -9,6 +9,7 @@ namespace CarbideCreatePlantLabels.App.Models
 
         public double LabelY { get; set; }
         public double LabelZ { get; set; }
+        public double TextMaxZ {get;set;}
 
         public double OffsetFromLeft {get;set;}
         public double OffsetFromTop {get;set;}

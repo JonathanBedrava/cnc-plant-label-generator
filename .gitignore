@@ -1,3 +1,4 @@
 ﻿**/[Bb]in/
 **/[Oo]bj/**/*
 **/CarbideCreate.Core/obj/Debug/netstandard2.0/CarbideCreate.Core.assets.cache
+**/*.nc

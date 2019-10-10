@@ -1,10 +1,5 @@
 [
     {
-        "CommonName":"Goumi",
-        "ScientificName":"Elaeagnus multiflora",
-        "Quantity": 9
-    },
-    {
         "CommonName": "Serviceberry",
         "ScientificName":"Amelanchier alnifolia",
         "Quantity": 4
@@ -12,7 +7,7 @@
     {
         "CommonName": "Haskap",
         "ScientificName":"Lonicera caerulea",
-        "Quantity": 2
+        "Quantity": 4
     },
     {
         "CommonName": "Lovage",
@@ -29,9 +24,14 @@
         "Quantity": 5
     },
     {
+        "CommonName":"Goumi",
+        "ScientificName":"Elaeagnus multiflora",
+        "Quantity": 5
+    },
+    {
         "CommonName":"Paw Paw",
         "ScientificName":"Asimina triloba",
-        "Quantity": 10
+        "Quantity": 6
     },
     {
         "CommonName":"Hardy kiwi",
@@ -65,7 +65,8 @@
     },
     {
         "CommonName": "Elderberry",
-        "ScientificName": "Sambucus canadensis"
+        "ScientificName": "Sambucus canadensis",
+        "Quantity": 8
     },
     {
         "CommonName":"Arugula",
@@ -78,7 +79,8 @@
     },
     {
         "CommonName":"Honeysuckle",
-        "ScientificName":"Lonicera caprifolium"
+        "ScientificName":"Lonicera caprifolium",
+        "Quantity": 5
     },
     {
         "CommonName":"Crabapple",
